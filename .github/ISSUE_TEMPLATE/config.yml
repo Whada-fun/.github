@@ -1,0 +1,29 @@
+# Issue 選單設定
+#
+# blank_issues_enabled: false 表示強制使用範本，避免收到缺乏資訊的 issue。
+# 若某些 repo 需要開放自由格式，可在該 repo 自行放一份 config.yml 覆寫。
+blank_issues_enabled: false
+
+contact_links:
+  - name: 🔒 回報資安漏洞
+    url: https://github.com/Whada-fun/.github/blob/main/SECURITY.md
+    about: 請勿以公開 issue 回報漏洞。請依資安政策使用私密管道通報。
+
+  - name: 🤝 行為準則檢舉
+    url: https://github.com/Whada-fun/.github/blob/main/CODE_OF_CONDUCT.md
+    about: 遭遇騷擾或不當行為，請依行為準則的檢舉管道處理。
+
+  - name: 📖 貢獻指南
+    url: https://github.com/Whada-fun/.github/blob/main/CONTRIBUTING.md
+    about: 送出 PR 前請先閱讀分支命名、commit 規範與審查流程。
+
+  # [TODO] 補上下列連結後取消註解。url 必須是完整有效的網址，
+  #        填 [TODO] 之類的佔位字串會讓整份 config.yml 失效。
+  #
+  # - name: 💬 使用問題與討論
+  #   url: https://github.com/orgs/Whada-fun/discussions
+  #   about: 不確定用法、想問問題，請到討論區。
+  #
+  # - name: 🎮 玩家客服
+  #   url: https://[TODO 官方客服網址]
+  #   about: 帳號、儲值、遊戲內問題請洽官方客服，GitHub 不處理玩家客服。

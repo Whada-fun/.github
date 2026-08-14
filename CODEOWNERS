@@ -1,0 +1,51 @@
+# CODEOWNERS —— 程式碼審查責任歸屬
+#
+# ⚠️ 重要：CODEOWNERS 不在 GitHub 可繼承的預設社群健康文件清單內。
+#    放在 .github repo 只會對 .github repo 自己生效（用來保護治理規章本身）。
+#    其他 repo 必須各自複製一份到 根目錄、.github/ 或 docs/ 之下。
+#
+# 語法：<檔案模式>  <負責人>
+#   - 後面的規則會覆蓋前面的規則（最後匹配者勝出）
+#   - 負責人可寫 @使用者 或 @組織/團隊
+#   - 被指定的人必須對該 repo 有 write 權限，否則規則會被忽略
+#   - 搭配 branch protection 的「Require review from Code Owners」才會強制生效
+#
+# [TODO] 建立團隊後，取消下列規則的註解並替換為實際團隊名稱。
+#        團隊不存在時 GitHub 會在 repo 的 CODEOWNERS 頁面顯示語法錯誤，
+#        因此在團隊建好之前請保持註解狀態。
+
+
+# ---------------------------------------------------------------------------
+# 預設：未被下列任何規則匹配到的檔案
+# ---------------------------------------------------------------------------
+# *                             @WHADA/[TODO-核心團隊]
+
+
+# ---------------------------------------------------------------------------
+# 治理與法務文件 —— 變更需經 Org Owner
+# ---------------------------------------------------------------------------
+# /GOVERNANCE.md                @WHADA/[TODO-org-owners]
+# /CODE_OF_CONDUCT.md           @WHADA/[TODO-org-owners]
+# /SECURITY.md                  @WHADA/[TODO-org-owners] @WHADA/[TODO-資安]
+# /TRADEMARK.md                 @WHADA/[TODO-org-owners] @WHADA/[TODO-法務]
+# /LICENSE                      @WHADA/[TODO-org-owners] @WHADA/[TODO-法務]
+
+
+# ---------------------------------------------------------------------------
+# CI / 建置 / 相依套件 —— 供應鏈風險較高，需專責審查
+# ---------------------------------------------------------------------------
+# /.github/workflows/           @WHADA/[TODO-平台團隊]
+# /scripts/                     @WHADA/[TODO-平台團隊]
+# package.json                  @WHADA/[TODO-平台團隊]
+# package-lock.json             @WHADA/[TODO-平台團隊]
+# Dockerfile                    @WHADA/[TODO-平台團隊]
+
+
+# ---------------------------------------------------------------------------
+# 各專案自行擴充的範例（複製到專案 repo 後依實際結構調整）
+# ---------------------------------------------------------------------------
+# /src/gameplay/                @WHADA/[TODO-遊戲玩法]
+# /src/backend/                 @WHADA/[TODO-後端]
+# /src/payment/                 @WHADA/[TODO-後端] @WHADA/[TODO-資安]
+# /assets/                      @WHADA/[TODO-美術]
+# *.cs                          @WHADA/[TODO-客戶端]

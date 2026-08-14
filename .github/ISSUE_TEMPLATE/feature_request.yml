@@ -1,0 +1,60 @@
+name: ✨ 功能建議
+description: 提出新功能或改進構想
+title: "[Feature] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提出構想前，建議先閱讀[貢獻指南](https://github.com/Whada-fun/.github/blob/main/CONTRIBUTING.md)。
+
+        > 大型變更建議先開 issue 討論方向再動手，避免白做工。
+
+  - type: checkboxes
+    id: prechecks
+    attributes:
+      label: 送出前確認
+      options:
+        - label: 我已搜尋過現有的 issue，確認不是重複提案
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 想解決什麼問題
+      description: 請先描述「問題」而非「解法」。誰會遇到？多常遇到？現在怎麼繞過？
+      placeholder: 玩家每次切換角色都要重進大廳，一場對戰前平均要多花 30 秒。
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建議的做法
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 考慮過的其他做法
+      description: 包含「維持現狀」為什麼不夠好
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: 影響範圍
+      options:
+        - 僅影響單一功能
+        - 影響多個功能
+        - 影響資料結構或存檔格式
+        - 影響對外 API 或存檔相容性
+        - 不確定
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 其他補充
+      description: 參考資料、競品做法、設計稿等
